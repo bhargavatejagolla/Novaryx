@@ -1,0 +1,144 @@
+# ============================================
+# NOVARYX - Git Ignore Rules
+# ============================================
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.whl
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environment
+venv/
+.venv/
+env/
+.env
+.env.local
+.env.production
+.env.development
+
+# ---- Node ----
+node_modules/
+.pnpm-store/
+*.tsbuildinfo
+.next/
+.nuxt/
+dist/
+
+# ---- Models (Large Files) ----
+system/models/*
+!system/models/.gitkeep
+
+# ---- ChromaDB Data ----
+system/rag_engine/chromadb/collections/
+system/rag_engine/chromadb/index/
+*.bin
+*.pickle
+*.parquet
+
+# ---- Generated Projects ----
+projects/
+!projects/.gitkeep
+
+# ---- Deployments ----
+deployments/
+!deployments/.gitkeep
+
+# ---- Snapshots ----
+snapshots/**/*.zip
+snapshots/**/*.tar.gz
+snapshots/**/*.json
+!snapshots/.gitkeep
+
+# ---- State Snapshots ----
+system/state_snapshots/
+!system/state_snapshots/.gitkeep
+
+# ---- Logs ----
+logs/
+*.log
+!logs/.gitkeep
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ---- OS Files ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ---- Temporary ----
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# ---- Test Outputs ----
+tests/fixtures/output/
+coverage/
+.coverage
+htmlcov/
+.tox/
+
+# ---- Database ----
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ---- Environment ----
+.env
+.env.*
+!.env.example
+
+# ---- API Keys ----
+*_api_key*
+*_secret*
+credentials.json
+service-account.json
+
+# ---- PocketBase ----
+pocketbase
+pb_data/
+
+# ---- Docker ----
+docker-compose.override.yml
+
+# ---- Archives ----
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ---- Large Files ----
+*.gguf
+*.bin (model files)
+*.safetensors
+
+# ---- Misc ----
+*.bak
+*.orig

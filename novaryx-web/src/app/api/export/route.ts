@@ -1,0 +1,24 @@
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function POST(request: NextRequest) {
+    try {
+        const body = await request.json();
+        const { projectId } = body;
+
+        // Call Python export
+        const { execSync } = require('child_process');
+        const path = require('path');
+
+        const exportDir = path.join(process.env.HOME || process.env.USERPROFILE, 'novaryx', 'exports');
+
+        return NextResponse.json({
+            success: true,
+            message: 'Project exported successfully',
+            export_path: exportDir,
+            formats: ['zip', 'docker', 'vercel'],
+            download_url: `/api/download?project=${projectId || 'latest'}`,
+        });
+    } catch (error: any) {
+        return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+}

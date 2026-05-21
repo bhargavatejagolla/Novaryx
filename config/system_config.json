@@ -1,0 +1,102 @@
+{
+  "version": "0.10.0",
+  "root": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX",
+  "current_phase": "idle",
+  "models": {
+    "qwen": {
+      "name": "qwen2.5-coder-7b-instruct",
+      "path": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\models\\qwen",
+      "type": "qwen",
+      "context_length": 8192,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "max_tokens": 2048,
+      "gpu_layers": 0,
+      "threads": 4
+    },
+    "deepseek": {
+      "name": "deepseek-coder-7b-instruct",
+      "path": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\models\\deepseek",
+      "type": "deepseek",
+      "context_length": 8192,
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "max_tokens": 2048,
+      "gpu_layers": 0,
+      "threads": 4
+    },
+    "embedding": {
+      "name": "all-MiniLM-L6-v2",
+      "path": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\models\\embeddings_model",
+      "type": "embedding",
+      "context_length": 512,
+      "temperature": 0.0,
+      "top_p": 0.9,
+      "max_tokens": 512,
+      "gpu_layers": 0,
+      "threads": 2
+    }
+  },
+  "resources": {
+    "max_memory_gb": 14.0,
+    "max_cpu_cores": 4,
+    "max_parallel_agents": 2,
+    "generation_timeout_seconds": 600,
+    "max_pages_per_generation": 20,
+    "max_repair_attempts": 3
+  },
+  "storage": {
+    "novaryx_root": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX",
+    "projects_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\projects",
+    "snapshots_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\snapshots",
+    "templates_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\templates",
+    "models_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\models",
+    "logs_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\logs",
+    "chromadb_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\rag_engine\\chromadb",
+    "deployments_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\deployments",
+    "max_project_size_mb": 500,
+    "auto_cleanup_days": 30
+  },
+  "chromadb": {
+    "host": "localhost",
+    "port": 8000,
+    "persist_directory": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\rag_engine\\chromadb",
+    "collection_name": "novaryx_templates",
+    "embedding_dimension": 384,
+    "distance_metric": "cosine",
+    "index_size": 10000
+  },
+  "pocketbase": {
+    "version": "0.22.0",
+    "port": 8090,
+    "data_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\pocketbase\\data",
+    "public_dir": "C:\\Users\\bharg\\OneDrive\\Documents\\ztest\\NOVARYX\\system\\pocketbase\\public",
+    "admin_email": "admin@novaryx.local"
+  },
+  "presets": {
+    "production": {
+      "name": "production",
+      "temperature": 0.1,
+      "max_tokens": 2048,
+      "repair_attempts": 3,
+      "creativity_level": "strict",
+      "template_priority": "performance"
+    },
+    "startup": {
+      "name": "startup",
+      "temperature": 0.2,
+      "max_tokens": 3072,
+      "repair_attempts": 2,
+      "creativity_level": "balanced",
+      "template_priority": "animation"
+    },
+    "creative": {
+      "name": "creative",
+      "temperature": 0.3,
+      "max_tokens": 4096,
+      "repair_attempts": 1,
+      "creativity_level": "creative",
+      "template_priority": "animation"
+    }
+  }
+}

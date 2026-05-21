@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0",
+    "default_provider": "ollama",
+    "fallback_enabled": true,
+    "providers": {
+        "ollama": {
+            "enabled": true,
+            "priority": 100,
+            "base_url": "http://localhost:11434",
+            "models": {
+                "generation": "qwen2.5-coder:7b",
+                "repair": "deepseek-coder:6.7b",
+                "planning": "qwen2.5-coder:7b",
+                "embedding": "nomic-embed-text:latest",
+                "default": "qwen2.5-coder:7b"
+            },
+            "generation_defaults": {
+                "temperature": 0.1,
+                "max_tokens": 2048,
+                "top_p": 0.9
+            }
+        },
+        "gemini": {
+            "enabled": false,
+            "priority": 50,
+            "requires_api_key": true,
+            "api_key_env": "GEMINI_API_KEY",
+            "models": {
+                "generation": "gemini-2.0-flash",
+                "planning": "gemini-2.0-flash",
+                "repair": "gemini-2.0-flash",
+                "default": "gemini-2.0-flash"
+            },
+            "generation_defaults": {
+                "temperature": 0.1,
+                "max_tokens": 2048,
+                "top_p": 0.9
+            }
+        }
+    },
+    "model_roles": {
+        "generation": "Main code and component generation",
+        "repair": "Bug fixing and code repair",
+        "planning": "Architecture planning and system design",
+        "embedding": "Vector embeddings for RAG retrieval"
+    }
+}

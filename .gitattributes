@@ -1,0 +1,65 @@
+# ============================================
+# NOVARYX - Git Attributes
+# Handles line endings correctly on Windows
+# ============================================
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Python files - force LF
+*.py text eol=lf
+*.pyi text eol=lf
+
+# Shell scripts - force LF
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Config files - force LF
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.cfg text eol=lf
+*.ini text eol=lf
+
+# Web files - force LF
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+
+# Documentation - force LF
+*.md text eol=lf
+*.txt text eol=lf
+*.rst text eol=lf
+
+# Binary files - no normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.webm binary
+
+# Model files - binary
+*.gguf binary
+*.bin binary
+*.safetensors binary
+*.onnx binary
+
+# Archives - binary
+*.zip binary
+*.tar.gz binary
+*.7z binary
