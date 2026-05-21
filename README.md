@@ -190,5 +190,5 @@ Contributions are what make the open-source community an amazing place to learn,
 ---
 
 *Built with absolute architectural discipline, not AI chaos.*  
-**🌌 Engineered by NOVARYX Core Team.**
+**🌌 Engineered by Golla Bhargava Teja**
 
