@@ -71,7 +71,7 @@ NOVARYX/
 
 1. **Clone the Repository**
    ```bash
-   git clone <your-repository-url>
+   git clone <[your-repository-url](https://github.com/bhargavatejagolla/Novaryx.git)>
    cd NOVARYX
    ```
 
